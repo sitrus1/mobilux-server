@@ -1,17 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/users",
-        "destination": "/db.json/users"
-      },
-      {
-        "source": "/banners",
-        "destination": "/db.json/banners"
-      },
-      {
-        "source": "/categories",
-        "destination": "/db.json/categories"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ]
+}
