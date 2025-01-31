@@ -1,8 +1,16 @@
 {
     "rewrites": [
       {
-        "source": "/api/:path*",
-        "destination": "/db.json/:path*"
+        "source": "/users",
+        "destination": "/db.json/users"
+      },
+      {
+        "source": "/banners",
+        "destination": "/db.json/banners"
+      },
+      {
+        "source": "/categories",
+        "destination": "/db.json/categories"
       }
     ]
   }
